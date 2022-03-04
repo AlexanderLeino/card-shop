@@ -1,5 +1,7 @@
 module.exports = {
+    User: require('./User'),
     CardSet: require('./CardSet.js'),
-    Pokemon: require('./Pokemon')
+    PokemonCard: require('./PokemonCard'),
+    Cart: require('./Cart')
 
 }

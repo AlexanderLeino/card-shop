@@ -1,7 +1,6 @@
-import mongoose from 'mongoose'
-const { Schema } = require('mongoose')
+const { Schema, model} = require('mongoose')
 
-const UserSchema = new Schema({
+const userSchema = new Schema({
     
         userName: {
             type: String,
@@ -23,21 +22,21 @@ const UserSchema = new Schema({
         },
 
         email: {
-            type:String,
+            type: String,
             required: true,
             unique: true,
             match: [/.+@.+\..+/, 'Must use a valid email address'],
         },
 
-        collection: [{
+        cardCollection: [{
             type: Schema.Types.ObjectId, 
-            ref:'PokemonCard'
+            ref:'PokemonCard',
         }],
         
-        cart: [{
+        cart: {
             type: Schema.Types.ObjectId,
-            ref: 'Cart'
-        }]
+            ref: 'Cart',
+        }
 })
 
 userSchema.pre('save', async function (next) {

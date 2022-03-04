@@ -1,11 +1,8 @@
 const mongoose = require('mongoose');
 require('dotenv').config()
-console.log(process.env)
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/yourlocalfarmersdb", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/cardshop", {
+    useNewUrlParser: true,
 });
 
 module.exports = mongoose.connection;

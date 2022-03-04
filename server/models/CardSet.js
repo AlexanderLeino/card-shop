@@ -1,5 +1,4 @@
-import mongoose from 'mongoose'
-const { Schema} = require('mongoose')
+const { Schema, model} = require('mongoose')
 
 const CardSetSchema = new Schema({
     name: {
@@ -15,11 +14,11 @@ const CardSetSchema = new Schema({
     
     totalNumberOfCardsInSet: {
         type: Number,
-        maxlength: 3,
+        maxlength: 4,
         required: true,
     }
 }) 
 
-const CardSet = mongoose.Model('CardSet', CardSetSchema)
+const CardSet = model('CardSet', CardSetSchema)
 
 module.exports = CardSet
