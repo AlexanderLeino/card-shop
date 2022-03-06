@@ -122,6 +122,7 @@ const userData = [
         firstName: 'Alex',
         lastName: 'Leino',
         email: 'Alexander.Leino@yahoo.com',
+        cardCollection: [pokemonCardId[0]]
     },
     {
         _id: userId[1],
@@ -159,6 +160,11 @@ const pokemonCardData = [
         cardValue: 0,
         language: 'English'
     },
+    {
+        _id: pokemonCardId[1],
+        name: 'Grapploct',
+        
+    }
 ]
 
 const cardSetData = [

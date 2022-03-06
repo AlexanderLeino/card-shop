@@ -9,7 +9,7 @@ const typeDefs = gql`
        lastName: String
        email: String!
        password: String!
-       collection: [PokemonCard]
+       cardCollection: [PokemonCard]
        
     }
 
@@ -46,6 +46,12 @@ const typeDefs = gql`
         _id: ID!
         buyer: User
         items: [PokemonCard]
+    }
+
+    type Query{
+        me(_id: ID!) : User
+        pokemonCard (_id: ID!): PokemonCard
+        
     }
 
 `
